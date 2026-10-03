@@ -1,0 +1,1061 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>the_enderex – Produkte, die es wert sind, entdeckt zu werden</title>
+
+    <meta
+        name="description"
+        content="the_enderex entdeckt praktische Produkte, clevere Gadgets, Home-&-Living-Ideen, Geschenkideen und interessante Produkte für den Alltag."
+    >
+
+    <style>
+        :root {
+            --navy: #163A5F;
+            --navy-dark: #0F2D4A;
+            --navy-light: #DCE6F0;
+            --text: #172033;
+            --muted: #667085;
+            --background: #F8FAFC;
+            --white: #FFFFFF;
+            --border: #E5EAF0;
+            --shadow: 0 12px 35px rgba(15, 45, 74, 0.08);
+            --radius: 18px;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family:
+                Inter,
+                -apple-system,
+                BlinkMacSystemFont,
+                "Segoe UI",
+                Roboto,
+                Helvetica,
+                Arial,
+                sans-serif;
+            background: var(--background);
+            color: var(--text);
+            line-height: 1.6;
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        .container {
+            width: min(1120px, calc(100% - 40px));
+            margin: 0 auto;
+        }
+
+        /* =========================
+           HEADER
+        ========================= */
+
+        header {
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            background: rgba(255, 255, 255, 0.94);
+            backdrop-filter: blur(14px);
+            border-bottom: 1px solid rgba(229, 234, 240, 0.8);
+        }
+
+        .nav {
+            min-height: 76px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 30px;
+        }
+
+        .logo {
+            font-size: 1.35rem;
+            font-weight: 800;
+            letter-spacing: -0.04em;
+            color: var(--navy);
+        }
+
+        .logo span {
+            color: var(--text);
+        }
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 28px;
+            list-style: none;
+            font-size: 0.94rem;
+            font-weight: 500;
+            color: #4B5565;
+        }
+
+        .nav-links a {
+            transition: color 0.2s ease;
+        }
+
+        .nav-links a:hover {
+            color: var(--navy);
+        }
+
+        /* =========================
+           HERO
+        ========================= */
+
+        .hero {
+            padding: 100px 0 90px;
+            background:
+                radial-gradient(
+                    circle at 80% 20%,
+                    rgba(22, 58, 95, 0.08),
+                    transparent 35%
+                ),
+                var(--white);
+        }
+
+        .hero-grid {
+            display: grid;
+            grid-template-columns: 1.15fr 0.85fr;
+            align-items: center;
+            gap: 70px;
+        }
+
+        .eyebrow {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 7px 13px;
+            border-radius: 999px;
+            background: var(--navy-light);
+            color: var(--navy);
+            font-size: 0.78rem;
+            font-weight: 700;
+            letter-spacing: 0.04em;
+            text-transform: uppercase;
+            margin-bottom: 22px;
+        }
+
+        .eyebrow::before {
+            content: "";
+            width: 7px;
+            height: 7px;
+            border-radius: 50%;
+            background: var(--navy);
+        }
+
+        h1 {
+            font-size: clamp(2.7rem, 5vw, 4.7rem);
+            line-height: 1.04;
+            letter-spacing: -0.055em;
+            max-width: 760px;
+            margin-bottom: 25px;
+        }
+
+        .hero-text {
+            max-width: 620px;
+            font-size: 1.13rem;
+            color: var(--muted);
+            margin-bottom: 35px;
+        }
+
+        .buttons {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 14px;
+        }
+
+        .button {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 13px 20px;
+            border-radius: 11px;
+            font-weight: 700;
+            font-size: 0.95rem;
+            transition:
+                transform 0.2s ease,
+                background 0.2s ease,
+                box-shadow 0.2s ease;
+        }
+
+        .button-primary {
+            background: var(--navy);
+            color: var(--white);
+            box-shadow: 0 8px 22px rgba(22, 58, 95, 0.2);
+        }
+
+        .button-primary:hover {
+            background: var(--navy-dark);
+            transform: translateY(-2px);
+            box-shadow: 0 12px 26px rgba(22, 58, 95, 0.25);
+        }
+
+        .button-secondary {
+            border: 1px solid var(--border);
+            background: var(--white);
+            color: var(--text);
+        }
+
+        .button-secondary:hover {
+            border-color: var(--navy-light);
+            transform: translateY(-2px);
+        }
+
+        .hero-card {
+            min-height: 390px;
+            border-radius: 28px;
+            background:
+                linear-gradient(
+                    145deg,
+                    #163A5F 0%,
+                    #244E76 55%,
+                    #0F2D4A 100%
+                );
+            padding: 38px;
+            color: white;
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 25px 60px rgba(15, 45, 74, 0.18);
+        }
+
+        .hero-card::before,
+        .hero-card::after {
+            content: "";
+            position: absolute;
+            border-radius: 50%;
+            border: 1px solid rgba(255, 255, 255, 0.12);
+        }
+
+        .hero-card::before {
+            width: 260px;
+            height: 260px;
+            right: -90px;
+            top: -70px;
+        }
+
+        .hero-card::after {
+            width: 360px;
+            height: 360px;
+            right: -130px;
+            top: -120px;
+        }
+
+        .hero-card-content {
+            position: relative;
+            z-index: 2;
+        }
+
+        .hero-card-label {
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 0.12em;
+            opacity: 0.7;
+            margin-bottom: 70px;
+        }
+
+        .hero-card h2 {
+            font-size: 2rem;
+            line-height: 1.15;
+            letter-spacing: -0.03em;
+            margin-bottom: 16px;
+        }
+
+        .hero-card p {
+            color: rgba(255, 255, 255, 0.76);
+            max-width: 320px;
+        }
+
+        /* =========================
+           SECTION
+        ========================= */
+
+        section {
+            padding: 90px 0;
+        }
+
+        .section-header {
+            display: flex;
+            align-items: end;
+            justify-content: space-between;
+            gap: 30px;
+            margin-bottom: 38px;
+        }
+
+        .section-header h2 {
+            font-size: clamp(2rem, 3vw, 2.7rem);
+            line-height: 1.1;
+            letter-spacing: -0.04em;
+            margin-bottom: 8px;
+        }
+
+        .section-header p {
+            color: var(--muted);
+            max-width: 600px;
+        }
+
+        /* =========================
+           CATEGORIES
+        ========================= */
+
+        .categories {
+            background: var(--white);
+        }
+
+        .category-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 18px;
+        }
+
+        .category {
+            padding: 28px;
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            background: var(--white);
+            transition:
+                transform 0.2s ease,
+                box-shadow 0.2s ease,
+                border-color 0.2s ease;
+        }
+
+        .category:hover {
+            transform: translateY(-4px);
+            box-shadow: var(--shadow);
+            border-color: var(--navy-light);
+        }
+
+        .category-icon {
+            width: 46px;
+            height: 46px;
+            display: grid;
+            place-items: center;
+            border-radius: 12px;
+            background: var(--navy-light);
+            margin-bottom: 20px;
+            font-size: 1.25rem;
+        }
+
+        .category h3 {
+            font-size: 1.05rem;
+            margin-bottom: 7px;
+        }
+
+        .category p {
+            color: var(--muted);
+            font-size: 0.9rem;
+        }
+
+        /* =========================
+           ARTICLES
+        ========================= */
+
+        .article-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 24px;
+        }
+
+        .article-card {
+            overflow: hidden;
+            background: var(--white);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            transition:
+                transform 0.2s ease,
+                box-shadow 0.2s ease;
+        }
+
+        .article-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow);
+        }
+
+        .article-image {
+            height: 190px;
+            background:
+                linear-gradient(
+                    135deg,
+                    #E9EFF5,
+                    #DCE6F0
+                );
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--navy);
+            font-weight: 800;
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+        }
+
+        .article-content {
+            padding: 25px;
+        }
+
+        .article-category {
+            color: var(--navy);
+            font-size: 0.75rem;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+        }
+
+        .article-card h3 {
+            font-size: 1.2rem;
+            line-height: 1.3;
+            margin: 10px 0 10px;
+        }
+
+        .article-card p {
+            color: var(--muted);
+            font-size: 0.92rem;
+            margin-bottom: 18px;
+        }
+
+        .read-more {
+            color: var(--navy);
+            font-weight: 750;
+            font-size: 0.9rem;
+        }
+
+        /* =========================
+           ABOUT
+        ========================= */
+
+        .about {
+            background: var(--navy);
+            color: var(--white);
+        }
+
+        .about-grid {
+            display: grid;
+            grid-template-columns: 0.8fr 1.2fr;
+            gap: 80px;
+            align-items: center;
+        }
+
+        .about h2 {
+            font-size: clamp(2rem, 3vw, 2.8rem);
+            line-height: 1.1;
+            letter-spacing: -0.04em;
+        }
+
+        .about p {
+            color: rgba(255, 255, 255, 0.72);
+            margin-bottom: 18px;
+        }
+
+        .about-list {
+            list-style: none;
+            margin-top: 25px;
+        }
+
+        .about-list li {
+            padding: 13px 0;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+            color: rgba(255, 255, 255, 0.86);
+        }
+
+        .about-list li::before {
+            content: "✓";
+            color: #AFC7DD;
+            font-weight: 800;
+            margin-right: 12px;
+        }
+
+        /* =========================
+           DISCLOSURE
+        ========================= */
+
+        .disclosure {
+            padding: 35px 0;
+            background: #EEF3F7;
+        }
+
+        .disclosure p {
+            max-width: 900px;
+            margin: 0 auto;
+            text-align: center;
+            color: #566273;
+            font-size: 0.82rem;
+        }
+
+        /* =========================
+           FOOTER
+        ========================= */
+
+        footer {
+            background: #0E1722;
+            color: rgba(255, 255, 255, 0.7);
+            padding: 45px 0;
+        }
+
+        .footer-grid {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 30px;
+        }
+
+        .footer-logo {
+            color: var(--white);
+            font-weight: 800;
+            font-size: 1.1rem;
+        }
+
+        .footer-links {
+            display: flex;
+            gap: 22px;
+            flex-wrap: wrap;
+            font-size: 0.82rem;
+        }
+
+        .footer-links a:hover {
+            color: var(--white);
+        }
+
+        .copyright {
+            font-size: 0.78rem;
+            margin-top: 20px;
+            color: rgba(255, 255, 255, 0.45);
+        }
+
+        /* =========================
+           RESPONSIVE
+        ========================= */
+
+        @media (max-width: 900px) {
+            .hero-grid,
+            .about-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .hero-card {
+                min-height: 300px;
+            }
+
+            .category-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .article-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .about-grid {
+                gap: 40px;
+            }
+        }
+
+        @media (max-width: 680px) {
+            .container {
+                width: min(100% - 28px, 1120px);
+            }
+
+            .nav {
+                min-height: 65px;
+            }
+
+            .nav-links {
+                display: none;
+            }
+
+            .hero {
+                padding: 65px 0;
+            }
+
+            section {
+                padding: 65px 0;
+            }
+
+            h1 {
+                font-size: 2.65rem;
+            }
+
+            .hero-card {
+                padding: 28px;
+                border-radius: 22px;
+            }
+
+            .category-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .section-header {
+                display: block;
+            }
+
+            .section-header p {
+                margin-top: 12px;
+            }
+
+            .footer-grid {
+                display: block;
+            }
+
+            .footer-links {
+                margin-top: 20px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <div class="container nav">
+
+        <a href="#" class="logo">
+            the<span>_enderex</span>
+        </a>
+
+        <nav>
+            <ul class="nav-links">
+                <li><a href="#empfehlungen">Empfehlungen</a></li>
+                <li><a href="#kategorien">Kategorien</a></li>
+                <li><a href="#ueber-uns">Über uns</a></li>
+            </ul>
+        </nav>
+
+    </div>
+</header>
+
+
+<main>
+
+    <!-- HERO -->
+
+    <section class="hero">
+        <div class="container hero-grid">
+
+            <div>
+
+                <div class="eyebrow">
+                    Entdecken · Vergleichen · Entscheiden
+                </div>
+
+                <h1>
+                    Produkte, die es wert sind, entdeckt zu werden.
+                </h1>
+
+                <p class="hero-text">
+                    Praktische Gadgets, clevere Alltagshelfer,
+                    interessante Produkte und inspirierende Ideen –
+                    ausgewählt und verständlich erklärt.
+                </p>
+
+                <div class="buttons">
+
+                    <a
+                        href="#empfehlungen"
+                        class="button button-primary"
+                    >
+                        Empfehlungen entdecken
+                    </a>
+
+                    <a
+                        href="#kategorien"
+                        class="button button-secondary"
+                    >
+                        Kategorien ansehen
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <div class="hero-card">
+
+                <div class="hero-card-content">
+
+                    <div class="hero-card-label">
+                        the_enderex
+                    </div>
+
+                    <h2>
+                        Kleine Entdeckungen.
+                        Große Ideen.
+                    </h2>
+
+                    <p>
+                        Wir suchen Produkte, die interessant,
+                        praktisch oder einfach überraschend
+                        nützlich sind.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- CATEGORIES -->
+
+    <section
+        class="categories"
+        id="kategorien"
+    >
+
+        <div class="container">
+
+            <div class="section-header">
+
+                <div>
+                    <h2>Entdecke unsere Themen</h2>
+
+                    <p>
+                        Von cleverer Technik bis zu praktischen
+                        Dingen für dein Zuhause.
+                    </p>
+                </div>
+
+            </div>
+
+
+            <div class="category-grid">
+
+                <a href="#" class="category">
+
+                    <div class="category-icon">⌁</div>
+
+                    <h3>Technik & Gadgets</h3>
+
+                    <p>
+                        Interessante Technik und praktische
+                        digitale Helfer.
+                    </p>
+
+                </a>
+
+
+                <a href="#" class="category">
+
+                    <div class="category-icon">⌂</div>
+
+                    <h3>Home & Living</h3>
+
+                    <p>
+                        Clevere Produkte für ein schöneres
+                        und praktisches Zuhause.
+                    </p>
+
+                </a>
+
+
+                <a href="#" class="category">
+
+                    <div class="category-icon">✦</div>
+
+                    <h3>Freizeit</h3>
+
+                    <p>
+                        Produkte für Hobby, Outdoor,
+                        Sport und Freizeit.
+                    </p>
+
+                </a>
+
+
+                <a href="#" class="category">
+
+                    <div class="category-icon">♡</div>
+
+                    <h3>Geschenkideen</h3>
+
+                    <p>
+                        Inspiration für besondere
+                        Geschenke und kleine Überraschungen.
+                    </p>
+
+                </a>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ARTICLES -->
+
+    <section id="empfehlungen">
+
+        <div class="container">
+
+            <div class="section-header">
+
+                <div>
+
+                    <h2>Aktuell entdecken</h2>
+
+                    <p>
+                        Unsere neuesten Ideen und
+                        Kaufempfehlungen.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="article-grid">
+
+
+                <article class="article-card">
+
+                    <div class="article-image">
+                        Gadgets
+                    </div>
+
+                    <div class="article-content">
+
+                        <div class="article-category">
+                            Technik & Gadgets
+                        </div>
+
+                        <h3>
+                            10 praktische Gadgets,
+                            die deinen Alltag einfacher machen
+                        </h3>
+
+                        <p>
+                            Kleine Helfer, die alltägliche
+                            Probleme lösen und überraschend
+                            nützlich sein können.
+                        </p>
+
+                        <a
+                            href="#"
+                            class="read-more"
+                        >
+                            Artikel entdecken →
+                        </a>
+
+                    </div>
+
+                </article>
+
+
+                <article class="article-card">
+
+                    <div class="article-image">
+                        Home & Living
+                    </div>
+
+                    <div class="article-content">
+
+                        <div class="article-category">
+                            Home & Living
+                        </div>
+
+                        <h3>
+                            10 interessante Produkte
+                            für ein schöneres Zuhause
+                        </h3>
+
+                        <p>
+                            Praktische Ideen für mehr Ordnung,
+                            Komfort und eine angenehme
+                            Atmosphäre.
+                        </p>
+
+                        <a
+                            href="#"
+                            class="read-more"
+                        >
+                            Artikel entdecken →
+                        </a>
+
+                    </div>
+
+                </article>
+
+
+                <article class="article-card">
+
+                    <div class="article-image">
+                        Geschenkideen
+                    </div>
+
+                    <div class="article-content">
+
+                        <div class="article-category">
+                            Geschenkideen
+                        </div>
+
+                        <h3>
+                            Geschenkideen für Menschen,
+                            die schon alles haben
+                        </h3>
+
+                        <p>
+                            Praktische, besondere und
+                            überraschende Geschenkideen
+                            für verschiedene Anlässe.
+                        </p>
+
+                        <a
+                            href="#"
+                            class="read-more"
+                        >
+                            Artikel entdecken →
+                        </a>
+
+                    </div>
+
+                </article>
+
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ABOUT -->
+
+    <section
+        class="about"
+        id="ueber-uns"
+    >
+
+        <div class="container about-grid">
+
+            <div>
+
+                <div class="eyebrow">
+                    Über the_enderex
+                </div>
+
+                <h2>
+                    Weniger suchen.
+                    Besser entdecken.
+                </h2>
+
+            </div>
+
+
+            <div>
+
+                <p>
+                    Im Internet gibt es unzählige Produkte.
+                    Wir möchten dabei helfen, interessante
+                    Produkte schneller zu entdecken und
+                    Kaufentscheidungen einfacher zu machen.
+                </p>
+
+                <p>
+                    Dabei geht es nicht darum, möglichst
+                    viele Produkte zu zeigen, sondern
+                    nützliche Informationen verständlich
+                    aufzubereiten.
+                </p>
+
+                <ul class="about-list">
+
+                    <li>
+                        Verständliche Produktinformationen
+                    </li>
+
+                    <li>
+                        Eigene Einschätzungen und Vergleiche
+                    </li>
+
+                    <li>
+                        Praktische Kaufideen
+                    </li>
+
+                    <li>
+                        Transparente Empfehlungen
+                    </li>
+
+                </ul>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- AFFILIATE DISCLOSURE -->
+
+    <section class="disclosure">
+
+        <div class="container">
+
+            <p>
+                Hinweis: Diese Website kann Affiliate-Links
+                enthalten. Wenn du über einen solchen Link
+                ein Produkt kaufst, können wir eine Provision
+                erhalten. Für dich entstehen dadurch keine
+                zusätzlichen Kosten.
+            </p>
+
+        </div>
+
+    </section>
+
+</main>
+
+
+<!-- FOOTER -->
+
+<footer>
+
+    <div class="container">
+
+        <div class="footer-grid">
+
+            <div class="footer-logo">
+                the_enderex
+            </div>
+
+            <div class="footer-links">
+
+                <a href="#">
+                    Impressum
+                </a>
+
+                <a href="#">
+                    Datenschutz
+                </a>
+
+                <a href="#">
+                    Affiliate-Hinweis
+                </a>
+
+                <a href="#">
+                    Kontakt
+                </a>
+
+            </div>
+
+        </div>
+
+        <div class="copyright">
+            © 2026 the_enderex. Alle Rechte vorbehalten.
+        </div>
+
+    </div>
+
+</footer>
+
+</body>
+</html>
